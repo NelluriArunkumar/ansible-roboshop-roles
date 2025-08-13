@@ -1,4 +1,4 @@
-- name: "Configuring the {{ Component }} server"
+- name: "configure {{ component }}"
   hosts: "{{ component }}"
   become: yes
   roles: ##This will automatically load the folder called roles in current working directory.
