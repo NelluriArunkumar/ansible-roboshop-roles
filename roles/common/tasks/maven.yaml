@@ -14,12 +14,12 @@
   - PyMySQL
   - cryptography
 
-  - name: Install maven dependencies
-    ansible.builtin.command: mvn clean package
-    args:
-      chdir: /app
+- name: Install maven dependencies
+  ansible.builtin.command: mvn clean package
+  args:
+    chdir: /app
 
-  - name: rename jar files
-    ansible.builtin.command: "mv target/{{ component }}-1.0.jar {{ component }}.jar"
-    args:
-      chdir: /app
+- name: rename jar files
+  ansible.builtin.command: "mv target/{{ component }}-1.0.jar {{ component }}.jar"
+  args:
+    chdir: /app
