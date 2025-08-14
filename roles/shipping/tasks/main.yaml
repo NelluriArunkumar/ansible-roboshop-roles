@@ -8,14 +8,7 @@
     name: common
     tasks_from: maven
 
-- name: Copy shipping service
-  ansible.builtin.copy:
-    src: shipping.service
-    dest: /etc/systemd/system/shipping.service
-
 - name: import data
-  tags:
-  - import
   community.mysql.mysql_db:
     name: all
     login_user: "{{ MYSQL_ROOT_USER }}"
